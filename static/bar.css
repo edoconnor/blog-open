@@ -1,0 +1,24 @@
+#chart-area svg {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+.x-axis,
+.y-axis {
+  font-family: "Lato", sans-serif;
+  font-size: 10px;
+}
+
+.x-axis-label,
+.y-axis-label {
+  font-family: "Lato", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

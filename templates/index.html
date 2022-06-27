@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block content %}
+<div class="container">
+  <div class="row">
+    {% for post in posts %}
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card">
+        <img
+          class="card-img-top"
+          src="{{url_for('static',filename='image_' + post.id|string + '.png')}}"
+          alt="img"
+        />
+        <!-- <img
+          src="static/image_1.png"
+          class="img-fluid"
+          alt="Responsive image"
+        /> -->
+        <div class="card-body">
+          <h5 class="card-title">{{ post.title }}</h5>
+          <p>{{ post.content | truncate(200) }}</p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
